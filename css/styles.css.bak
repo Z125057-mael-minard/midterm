@@ -17,20 +17,6 @@ html, body{
   padding: 0rem;
 }
 
-
-.section{
-  display: flex;
-  flex-direction: column;
-  .section-title{
-    margin-left:auto;
-    margin-right:auto;
-    h1{
-      font-family: "Alvinus Pixel";
-      color: var(--accent);
-    }
-  }
-}
-
 .box{
   border-style: solid;
   border-width: 0.15rem;
@@ -61,6 +47,18 @@ html, body{
       margin-top: 0rem;
       margin-bottom: 0rem;
     }
+    ul{
+      padding: 0rem;
+      margin: 0rem;
+      list-style-image: url("../images/icons/nav-icon.png");
+      list-style-position: inside;
+      li{
+        margin-bottom: 0.3rem;
+      }
+      .active{
+        list-style-image: url("../images/icons/nav-icon-selected.png");
+      }
+    }
     a{
       color: var(--accent);
     }
@@ -68,21 +66,6 @@ html, body{
       margin-top:1em;
       margin-bottom:1em;
       color: var(--accent);
-    }
-  }
-}
-
-#side-boxes-container{
-  ul{
-    padding: 0rem;
-    margin: 0rem;
-    list-style-image: url("../images/icons/nav-icon.png");
-    list-style-position: inside;
-    li{
-      margin-bottom: 0.3rem;
-    }
-    .active{
-      list-style-image: url("../images/icons/nav-icon-selected.png");
     }
   }
 }
@@ -147,10 +130,14 @@ html, body{
 
 #bigtext{
   font-family: "Alvinus Pixel";
-  font-weight: 400;
-  #bigtext-subtitle{
+  font-weight: 700;
+  #bigtext-mael{
     margin: 0rem;
     color: var(--accent);
+  }
+  #bigtext-subtitle{
+    margin: 0rem;
+    color: var(--light-background);
   }
 }
 
@@ -172,23 +159,6 @@ html, body{
   .intro-command{
     font-family: "Pixelify Sans";
     font-weight: 600;
-    color: var(--foreground);
-  }
-}
-
-#skills-box{
-  #skills-box-content{
-    h2{
-      color: var(--accent);
-      margin: 0rem;
-    }
-  }
-}
-
-#dialogue-box{
-  p{
-    font-family: "Pixelify Sans";
-    font-weight: 400;
     color: var(--foreground);
   }
 }
@@ -232,6 +202,10 @@ html, body{
     flex-direction: column;
     font-size: 3.5rem;
     margin-bottom: 15rem;
+    #bigtext-mael{
+      margin-right:auto;
+      margin-left:auto;
+    }
     #bigtext-subtitle{
       margin-right:auto;
       margin-left:auto;
@@ -305,6 +279,9 @@ html, body{
 
   #bigtext{
     font-size: 3.5rem;
+    #bigtext-mael{
+      margin-left: 0.5rem;
+    }
     #bigtext-subtitle{
       margin-top: -1.5rem;
       margin-left: 1.5rem;
@@ -388,6 +365,10 @@ html, body{
 
   #bigtext{
     font-size: 4.5rem;
+    #bigtext-mael{
+      margin-top: -2.5rem;
+      margin-left: -0.5rem;
+    }
     #bigtext-subtitle{
       margin-top: -1.5rem;
       margin-left: 1rem;
@@ -424,11 +405,6 @@ html, body{
   }
 }
 @media (min-width: 1400px){
-  .section{
-    .section-title{
-      font-size: 2rem;
-    }
-  }
   .box{
     min-width:10em;
     .box-titlebar{
@@ -453,7 +429,6 @@ html, body{
   #main-frame{
     width: 100%;
     padding: 3rem;
-    padding-top: 4rem;
   }
 
   #side-boxes-container{
@@ -469,16 +444,17 @@ html, body{
   }
 
   #bigtext{
-    display: flex;
-    flex-direction: column;
-    font-size: 3.0rem;
-    margin-bottom: 6rem;
+    font-size: 5.5rem;
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+    #bigtext-mael{
+    }
     #bigtext-subtitle{
-      margin-top: 1rem;
-      margin-right:auto;
-      margin-left:auto;
+      margin-top: -1rem;
+      margin-left: 2rem;
     }
   }
+
 
   #introduction-box{
     width: 40rem;
@@ -497,7 +473,7 @@ html, body{
     #intro-fetchtext{
       font-size:1rem;
       margin-bottom: 1.5rem;
-      margin-top: 1.5rem;
+      margin-top: 1rem;
     }
     #intro-text{
       font-size:1rem;
@@ -506,33 +482,5 @@ html, body{
     .intro-command{
       font-size: 1.3rem;
     }
-  }
-
-  #skills-box{
-    margin-right: auto;
-    margin-left: auto;
-    #skills-box-content{
-      padding-bottom: 0.5rem;
-      display: grid;
-      grid-template-columns: 2fr 1fr 3fr;
-      gap: 0.5rem 1.5rem;;
-      div:first-child{
-        grid-column:span 2;
-      }
-      h2{
-        font-size: 1rem;
-        font-weight: 300;
-      }
-      ul{
-        list-style-type: none;
-        margin:0rem;
-        padding-left:0rem;
-      }
-    }
-  }
-
-  #dialogue-box{
-    margin-right:auto;
-    margin-left:auto;
   }
 }
