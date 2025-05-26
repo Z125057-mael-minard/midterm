@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <title>Portfolio</title>
+    <script src="./scripts/darkmode.js" defer></script>
+    <script src="./scripts/menu.js" defer></script>
+  </head>
+  <body class="">
+    <button id="theme-toggle">
+      <img src="./images/lightmode-icon.svg" id="lightmode-icon"/>
+      <img src="./images/darkmode-icon.svg" id="darkmode-icon"/>
+    </button>
+    <header>
+      <a href="#" class="logo-holder">
+        <div class="logo">L</div>
+        <div class="logo-text">Portfolio Website</div>
+      </a>
+      <nav>
+        <ul id="menu">
+          <li>
+            <a href="./index.html">Back to Home</a>
+          </li>
+        </ul>
+        <a href="#" id="mobile-toggle">
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
+          </svg>
+        </a>
+      </nav>
+    </header>
+    <div class="contact-container">
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <input type="hidden" name="access_key" value="9caa0c37-920d-41be-8653-eaa7c2cb45a3">
+        <h1>Contact me</h1>
+        <hr>
+        <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+        <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+        <textarea type="message" name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+        <button type="submit" class="button">Submit<img src="./images/arrow-right.svg" alt="Submit contact form icon"/></button>
+      </form>
+    </div>
+  </body>
+</html>

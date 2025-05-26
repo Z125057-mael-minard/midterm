@@ -1,152 +1,255 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8"> <title>Portfolio</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <title>Portfolio</title>
+    <script src="./scripts/darkmode.js" defer></script>
+    <script src="./scripts/menu.js" defer></script>
+    <script src="./scripts/index.js" defer></script>
   </head>
-  <body>
-    <div id="bg">
-    </div>
-    <div id="flex-container">
-      <div id="main-frame">
-        <div id="bigtext">
-          <img src="images/gifs/header2.gif" id="bigtext-header"></img>
-          <p id="bigtext-subtitle">welcome to my portfolio website</p>
-        </div>
-        <div class="section" id="section-about-me">
-          <div class="section-title">
-            <h1>about me</h1>
-          </div>
-          <div class="box" id="introduction-box">
-            <div class="box-titlebar">
-              <h1>card</h1>
+  <body class="">
+    <button id="theme-toggle">
+      <img src="./images/lightmode-icon.svg" id="lightmode-icon"/>
+      <img src="./images/darkmode-icon.svg" id="darkmode-icon"/>
+    </button>
+    <header>
+      <a href="#" class="logo-holder">
+        <div class="logo">M</div>
+        <div class="logo-text">Portfolio Website</div>
+      </a>
+      <nav>
+        <ul id="menu">
+          <li>
+            <a href="#intro">Home</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#education">Education</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="./contact-me.html" class="button">Contact Me</a>
+          </li>
+        </ul>
+        <a href="#" id="mobile-toggle">
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
+          </svg>
+        </a>
+      </nav>
+    </header>
+    <main>
+      <section class="intro section-container" id="intro">
+        <div class="intro-left">
+          <div>
+            <h1><small>Welcome to</small> Mael's Portfolio</h1>
+            <p>
+              I'm Mael, a Computer Science student from France studying at Epita.<br>
+              Currently, I am studying abroad at Shibaura Institute of Technology in Tokyo, Japan.<br>
+              I am a programmer specialized in Software Engineering, Graphics Engineering,
+              and Low Level Development.<br>
+              <span>
+                So far, I've learned multiple programming languages, such as C, C++, C#, 
+                Python and Javascript
+              </span>
+            </p>
+            <div class="intro-buttons">
+              <a href="#projects" class="button">View my projects</a>
+              <a href="./contact-me.html" class="button">Contact Me</a>
             </div>
-            <div class="box-content" id="introduction-box-content">
-              <p class="intro-command">>whoami</p>
-              <p id="intro-ascii">⠀⠀
-                ⢮⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧ <br>⠀ 
-                ⠀⢘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠠ <br>
-                ⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇ <br>
-                ⠀⢸⣿⣿⣿⣿⣿⡿⣽⠇⢸⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠆ <br>
-                ⠀⠈⠘⢿⣿⡿⢿⣇⣹⠇⠨⢎⣿⢿⣿⣿⡿⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃ <br>
-                ⠀⠀⠀⢸⣿⡇⣷⣤⣩⡃⠘⠈⢸⠉⡤⣿⣅⡐⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⠆  <br>
-                ⠀⠀⠀⠈⠃⢿⠘⠛⠛⠃⠀⠀⠀⠀⠀⢿⣤⣉⡓⠻⣿⣿⣿⣿⣿⡳⣿⣿⡿⠀ <br>
-                ⠀⠀⠀⠀⠀⠈⣆⠀⠐⠀⢀⠀⠀⠀⠀⠈⠛⠿⠛⠁⠁⣿⣿⣿⣏⣽⣿⡟⠇⠀ <br>
-                ⠀⠀⠀⠀⠀⠀⠈⢦⡀⢀⠯⣤⠀⠀⠀⠀⠀⠀⠀⠀⢨⣿⣿⡿⠿⠿⠻⠁⠀⠀ <br>
-                ⠀⠀⠀⠀⠀⠀⠀⠀⢹⣄⡀⠀⠄⠀⡀⠀⠀⠀⢀⣠⢷⣿⣿⣿⡆⠀⠀⠀⠀⠀<br>
-                ⠀⠀⠀⠀⠀⢀⣠⣶⣿⣿⠑⢤⣈⣄⣤⣤⢶⣟⠯⠃⢹⣿⣿⣿⣷⣄⠀⠀⠀⠀ <br>
-                ⠀⢀⣠⣴⣾⣿⣿⣿⣿⡏⢀⣦⣿⡞⠓⠋⠉⠀⠀⠀⢸⣿⣿⣿⣿⣿⣷⣄⠀⠀  <br>
-                ⣶⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣿⣿⣷⡀⠂⠄⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣯⣧⡀ <br>
-                ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⢀⠀⣀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶ <br>
-                ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣄⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿</p>
-              <p id="intro-fetchtext">name: mael <br>
-                school: Shibaura Institute of Technology<br>
-                currently residing: tokyo, japan<br>
-                nationality: french<br>
-                major: computer science</p>
-              <p id="intro-text">Nice to meet you.</p>
-              <p class="intro-command">>_</p>
-            </div>
-          </div>
-          <div class="box" id="skills-box">
-            <div class="box-titlebar">
-              <h1>skills</h1>
-            </div>
-            <div class="box-content" id="skills-box-content">
-              <div id="skills-box-content-1">
-                <h2>Fields of work</h2>
-                <ul>
-                  <li>Graphics engineering</li>
-                  <li>Software engineering</li>
-                  <li>Web development</li>
-                  <li>Low level</li>
-                </ul>
-              </div>
-              <div id="skills-box-content-2">
-                <h2>General Skills</h2>
-                <ul>
-                  <li>Programming</li>
-                  <li>Problem Solving</li>
-                  <li>Communication</li>
-                  <li>Mathematics</li>
-                </ul>
-              </div>
-              <div id="skills-box-content-3">
-                <h2>Languages</h2>
-                <ul>
-                  <li>C</li>
-                  <li>C++</li>
-                  <li>C#</li>
-                  <li>Python</li>
-                  <li>Javascript</li>
-                </ul>
-              </div>
-              <div id="skills-box-content-4">
-                <h2>Tools</h2>
-                <ul>
-                  <li>Git</li>
-                  <li>CMake</li>
-                  <li>Make</li>
-                  <li>gcc</li>
-                  <li>ssh</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="box" id="dialogue-box">
-            <div class="box-titlebar">
-              <h1>introduction</h1>
-            </div>
-            <div class="box-content" id="dialogue-box-content">
-              <p>>I am Mael Minard, a french second year Computer<br> Engineering student at Epita.</p>
+            <div class="intro-links">
+              <a href="https://github.com/maelm-Epita" target="_blank" rel="noopener noreferrer">
+                <img src="./images/github.svg" alt="Github" id="github-img"/>
+              </a>
+              <a href="https://www.linkedin.com/in/mael-minard-2841162b2/" target="_blank" rel="noopener noreferrer">
+                <img src="./images/linkedin.svg" alt="LinkedIn" id="linkedin-img"/>
+              </a>
             </div>
           </div>
         </div>
-      </div>
-      <div id="side-boxes-container">
-        <header id="side-header">
-          <div class="box" >
-            <div class="box-titlebar">
-              <h1>home page</h1>
-            </div>
-            <div class="box-content" id="page-description-box-content">
-              <p>welcome to my <br>portfolio website :)</p>
-            </div>
-          </div>
-          <div class="box" id="navigation-box">
-            <div class="box-titlebar">
-              <h1>navigation</h1>
-            </div>
-            <div class="box-content">
+        <div class="intro-right">
+          <figure>
+            <a href="#projects" id="featured-project-link">
+              <div>
+                <img src="./images/dual-punk.png" alt="A thumbnail previewing the featured project" width="100%" id="featured-project-img"/>
+              </div>
+              <figcaption class="project-caption">
+                <h3 id="featured-project-text">Featured Project</p>
+              </figcaption>
+            </a>
+          </figure>
+        </div>
+      </section>
+      <section class="about section-container" id="about">
+        <h2>
+          <small>Skills</small>
+          About me 
+        </h2>
+        <div class="about-holder">
+          <div class="text-holder">
+            <div class="about-left">
+              <h3> Hard Skills </h3>
               <ul>
-                <li class="active"><a href="#bigtext">home</a></li>
-                <li><a href="#bigtext3">about me</a></li>
-                <li><a href="./experience.html">my experience</a></li>
+                <li class="language">C</li>
+                <li class="language">C++</li>
+                <li class="language">C#</li>
+                <li class="language">Python</li>
+                <li class="language">HTML</li>
+                <li class="language">CSS</li>
+                <li class="tool">Git</li>
+                <li class="tool">Make</li>
+                <li class="concept">OOP</li>
+                <li class="concept">Game development</li>
+                <li class="concept">Memory Management</li>
               </ul>
-              <hr>
+              <h3> Soft Skills </h3>
               <ul>
-                <li><a href="./contact.html">contact</a></li>
+                <li>Communication</li>
+                <li>Adaptability</li>
+                <li>Time management</li>
+                <li>Problem solving</li>
+                <li>Patience</li>
               </ul>
             </div>
-          </div>
-        </header>
-        <footer id="side-footer">
-          <div class="box" id="contact-box">
-            <div class="box-titlebar">
-              <h1>contact</h1>
+            <div class="about-right">
+              <h3>Get to know me</h3>
+              <p>
+                I'm a Computer Science student currently studying for an Engineering Master's Degree.
+                My school is in my home country of France, but I recently came to Japan to study abroad
+                at Shibaura Institute of Technology, in Tokyo. 
+              </p>
+              <p>
+                I've always been passionate about computers. I started experimenting early with programming, 
+                using tutorials I would find online.
+                Those early experiences have taught me how to self-study subjects and find creative solutions
+                to overcome challenges. Since starting Epita, my computer science skills have improved exponentially
+                and my love for the subject has only grown. I also study Mathematics, which is a demanding subject
+                but I find it very rewarding and sometimes quite eye-opening. 
+              </p>
+              <p>
+                Outside of computer science, I love
+                playing video games, listening to music and walking in nature.
+              </p>
             </div>
-            <div class="box-content">
-              <p id="contact-text">mael.minard00@gmail.com</p>
+          </div>
+        </div>
+      </section>
+      <section class="education section-container" id="education">
+        <h2>
+          <small>Background</small>
+          Education 
+        </h2>
+        <div class="timeline-holder" id="timeline-holder">
+          <div class="timeline" id="timeline">
+            <div class="timeline-element-container timeline-left">
+              <div class="timeline-element">
+                <small>June 2023</small>
+                <h3>Finished High School</h3>
+                <p>
+                  Passed my baccalaureat examination, majoring in Mathematics
+                </p>
+              </div>
+              <span class="left-arrow">
+            </div>
+            <div class="timeline-element-container timeline-right">
+              <div class="timeline-element">
+                <small>September 2023</small>
+                <h3>Joined Epita</h3>
+                <p>
+                  Joined the computer engineering school Epita.
+                  Currently in second year, expected graduation in 2028
+                </p>
+              </div>
+              <span class="right-arrow">
+            </div>
+            <div class="timeline-element-container timeline-left">
+              <div class="timeline-element">
+                <small>April 2025</small>
+                <h3>Went Abroad at SIT</h3>
+                <p>
+                  Went abroad to Tokyo, Japan to stuy at Shibaura Institute of Technology,
+                  as part of my computer engineering diploma at Epita.
+                </p>
+              </div>
+              <span class="left-arrow">
             </div>
           </div>
-        </footer>
-      </div>
-    </div>
+        </div>
+      </section>
+      <section class="projects section-container" id="projects">
+        <h2>
+          <small>Completed</small>
+          Projects 
+        </h2>
+        <div class="projects-container">
+          <article class="project" id="dual-punk">
+            <figure>
+              <div>
+                <img src="./images/dual-punk.png" alt="A thumbnail previewing the Dual Punk project" width="100%"/>
+              </div>
+              <div class="project-link">
+                <a href="https://github.com/Kupi53/ProjetS2_DualPunk">Dual Punk on Github</a>
+              </div>
+            </figure>
+            <h3>Dual Punk</h3>
+            <p>
+              Dual Punk is a rogue-like 2D shooter video game inspired by Hades and CyberPunk.
+              It was made in a team of 5 as a school project in Epita.
+              It uses the Unity game engine and is playable either alone or with a second player online.
+            </p>
+          </article>
+          <article class="project" id="word-search-solver">
+            <figure>
+              <div class="img-holder">
+                <img src="./images/ocr.png" alt="A thumbnail previewing the Word Search Solver project" width="100%"/>
+              </div>
+              <div class="project-link">
+                <a href="https://github.com/maelm-Epita/OCRWSS-epita">Word Search Solver on Github</a>
+              </div>
+            </figure>
+            <h3>Word Search Solver</h3>
+            <p>
+              This is a graphical application which can automically solve Word Search puzzles.
+              It was made in a team of 4 as a school project in Epita.
+              It uses OCR AI as well as image analysis techniques to recognize the letters in the image.
+              The AI as well as it's training algorithm was implemented in C without the use of any libraries.
+            </p>
+          </article>
+          <article class="project" id="noupharen">
+            <figure>
+              <div>
+                <img src="./images/noupharen.png" alt="A thumbnail previewing the Noupharen project" width="100%"/>
+              </div>
+              <div class="project-link">
+                <a href="https://github.com/maelm-Epita/Noupharen">Noupharen on Github</a>
+              </div>
+            </figure>
+            <h3>Noupharen</h3>
+            <p>
+              Noupharen is a graphical application used to generate and store dictionaries of words
+              based on user-defined rules. 
+              It was made as a personal project over a month, using the QT library.
+              The purpose of this program is to facilitate the creation of conlangs, which are
+              fictional languages.
+            </p>
+          </article>
+        </div>
+      </section>
+      <footer class="back-to-top">
+        <a href="#" class="button white">
+          <img src="./images/double-arrow-up.svg"></img>
+        </a>
+      </footer>
+    </main>
   </body>
 </html>
-
-<script src=index.js></script>
