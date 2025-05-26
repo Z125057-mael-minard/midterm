@@ -6,7 +6,7 @@ const timeline = document.getElementById("timeline");
 const timelineElements = document.getElementsByClassName("timeline-element-container");
 
 // featured project
-let project_index = Math.floor(Math.random() * (projects.length + 1));
+let project_index = Math.floor(Math.random() * (projects.length));
 let project = projects.item(project_index);
 let project_image = project.querySelectorAll("img").item(0);
 featuredProjectLink.href = "#"+project.id;
@@ -21,7 +21,7 @@ const timelineObserver = new IntersectionObserver((entries) => {
       for (let i=0; i<timelineElements.length; i++){
         timelineElements.item(i).classList.add('in-view');
       }
-      timelineObserver.unobserve(entry.target);
+      //timelineObserver.unobserve(entry.target);
     }
   });
 });
